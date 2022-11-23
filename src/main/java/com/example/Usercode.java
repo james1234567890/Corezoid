@@ -11,7 +11,7 @@ import java.util.UUID;
  * @author James
  */
 public class Usercode implements UsercodeHandler<String>  {
-     public static String generateGUID() {
+     public String generateGUID() {
         UUID uuid = UUID.randomUUID();
         return uuid.toString();
     }
