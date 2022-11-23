@@ -10,7 +10,12 @@ import java.util.UUID;
  *
  * @author James
  */
-public class Usercode implements UsercodeHandler<String>  {
+public class Usercode implements  UsercodeHandler<Map<String, String>, Map<String, String>> {
+      @java.lang.Override
+    public Map<String, String> handle(Map<String, String> data) throws Exception {
+        data.put("guid", generateGUID());
+        return data;
+    }
      public String generateGUID() {
         UUID uuid = UUID.randomUUID();
         return uuid.toString();
